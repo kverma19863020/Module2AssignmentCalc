@@ -9,7 +9,7 @@ __pycache__/
 *.so
 
 # Virtual environment folder
-venv/
+.venv/
 
 # Distribution / packaging
 .Python

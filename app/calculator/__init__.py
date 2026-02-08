@@ -5,13 +5,13 @@ def calculator():
 
     while True:
 
-        calc_input = input ("Enter an operation (add, subtract, multiply, divide) and two numbers, or 'exit' to quit: "))
-        if calc_input.lower() == "exit" :
+        user_input = input("Enter an operation (add, subtract, multiply, divide) and two numbers, or 'exit' to quit: ")
+        if user_input.lower() == "exit" :
             print ("Exiting Calc... Have a good day!")
             break
         
         try:
-            operation, num1, num2 =calc_input.split()
+            operation, num1, num2 =user_input.split()
             num1 ,num2 = float(num1) ,float(num2)
         except ValueError:
              print("Invalid input. Please follow the format: <operation> <num1> <num2>")

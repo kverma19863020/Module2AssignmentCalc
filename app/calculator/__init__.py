@@ -1,11 +1,11 @@
 from app.operations import addition, subtraction, division ,multiplication
 def calculator():
 
-    print("Welcome to the Calculator using REPL- Read ,Evaluate,Print,Loop")
+    print("Welcome to the calculator REPL! Type 'exit' to quit")
 
     while True:
 
-        calc_input = input ("Enter an operation to perform --> 'Add,Multiply,Subtract,Divide ")
+        calc_input = input ("Enter an operation (add, subtract, multiply, divide) and two numbers, or 'exit' to quit: "))
         if calc_input.lower() == "exit" :
             print ("Exiting Calc... Have a good day!")
             break
@@ -14,7 +14,7 @@ def calculator():
             operation, num1, num2 =calc_input.split()
             num1 ,num2 = float(num1) ,float(num2)
         except ValueError:
-             print("Entered Invalid Input ,Please follow format : <Operation> <num1> <num2> eg add 1 2")
+             print("Invalid input. Please follow the format: <operation> <num1> <num2>")
              continue
 
         if  operation == "add":
